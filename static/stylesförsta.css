@@ -1,0 +1,103 @@
+/* Resetting default browser styles */
+body, h1, p, button, input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    background-size: 400% 100%;
+    animation: moveBackground 20s ease infinite;
+    color: #fff; /* Text color */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px; /* Limiting maximum width for better readability */
+    padding: 40px;
+    background-color: rgba(40, 40, 40, 0.9); /* Dark grey background with slight transparency */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Box shadow for depth effect */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 400px; /* Limiting input width */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1; /* Input background color */
+    color: #333; /* Input text color */
+}
+
+button {
+    width: 100%;
+    max-width: 200px; /* Limiting button width */
+    padding: 15px;
+    background-color: #3498db; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9; /* Button background color on hover */
+}
+
+footer {
+    margin-top: 40px;
+    color: #ccc; /* Footer text color */
+}
+
+
+/* Animation for subtle background movement */
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+body {
+    background: linear-gradient(45deg, #FFD700, #FF6347, #00CED1, #FF69B4);
+    background-size: 400% 100%;
+    animation: moveBackground 20s ease infinite;
+}

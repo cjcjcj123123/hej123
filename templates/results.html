@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesandra.css') }}"> <!-- Link to CSS file -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Search Results for {{ company_name }}</h1>
+            <p class="description">Här kan du se om befattningshavare har ökat eller minskat sitt innehav</p>
+        </header>
+        <main>
+            <div class="table-container">
+                <table class="transaction-table">
+                    <thead>
+                        <tr>
+                            <th>Datum</th>
+                            <th>Bolag</th>
+                            <th>Person</th>
+                            <th>Position</th>
+                            <th>Transaktions Type</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Currency</th>
+                            <th>Character</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for transaction in transactions %}
+                        <tr>
+                            <td>{{ transaction["Date"] }}</td>
+                            <td>{{ transaction["Company"] }}</td>
+                            <td>{{ transaction["Person"] }}</td>
+                            <td>{{ transaction["Position"] }}</td>
+                            <td>{{ transaction["Transaction Type"] }}</td>
+                            <td>{{ transaction["typ"] }}</td>
+                            <td>{{ transaction["Amount"] }}</td>
+                            <td>{{ transaction["Currency"] }}</td>
+                            <td>{{ transaction["Character"] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <form action="/" method="get" class="search-form">
+                <button type="submit">Search for Another Company</button>
+            </form>
+        </main>
+        <footer>
+            <p>&copy; {{ current_year }} Insynshandel AB</p> <!-- Use dynamic current year -->
+        </footer>
+    </div>
+</body>
+</html>

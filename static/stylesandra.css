@@ -1,0 +1,144 @@
+/* Reset default browser styles */
+body, h1, p, button, input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #FFD700, #FF6347, #00CED1, #FF69B4);
+    background-size: 400% 100%;
+    animation: moveBackground 20s ease infinite;
+    color: #fff; /* Text color */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 7000px; /* Limiting maximum width for better readability */
+    padding: 40px;
+    background-color: rgba(40, 40, 40, 0); /* Dark grey background with slight transparency */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Box shadow for depth effect */
+    text-align: center;
+}
+
+
+
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-table th,
+.transaction-table td {
+    padding: 12px; /* Adjust padding for better spacing */
+    text-align: left;
+    font-family: Arial, sans-serif; /* Choose an appropriate font family */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Adjust font color */
+}
+
+.transaction-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.transaction-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.transaction-table tbody tr:hover {
+    background-color: #e0e0e0; /* Add hover effect */
+}
+
+.transaction-table th,
+.transaction-table td {
+    border: 1px solid #ddd; /* Adjust border color */
+}
+
+/* Adjust border radius for a more modern look */
+.transaction-table {
+    border-radius: 10px;
+}
+
+
+
+button:hover {
+    background-color: #2980b9; /* Button background color on hover */
+}
+
+footer {
+    margin-top: 40px;
+    color: #ccc; /* Footer text color */
+}
+
+/* Animation for subtle background movement */
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+/* Add these styles to your existing CSS file */
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-table th,
+.transaction-table td {
+    padding: 15px; /* Adjust padding for better spacing */
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px; /* Adjust font size for better readability */
+    color: #333; /* Adjust font color for better contrast */
+}
+
+.transaction-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.transaction-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Adjust border radius for a more modern look */
+.transaction-table {
+    border-radius: 10px;
+}
